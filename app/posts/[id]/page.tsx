@@ -1,4 +1,4 @@
-import RenderDynamicHTML from '@/app/_components/renderDynamicHTML';
+import RenderDynamicHTML from '@/components/renderDynamicHTML';
 import { getPost } from '@/lib/post';
 import Link from 'next/link';
 

@@ -62,7 +62,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className={`
         w-10 h-10 flex items-center justify-center fixed top-4 right-4 cursor-pointer rounded-full dark:bg-gray-200
-        bg-gray-900
+        bg-gray-950
         transition-colors
         ${toggling ? 'animate-toggle' : ''}
       `}>
