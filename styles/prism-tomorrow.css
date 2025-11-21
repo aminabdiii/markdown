@@ -1,0 +1,124 @@
+/* ============================
+   Prism One Dark Pro Theme
+   Author: https://github.com/Binaryify/OneDark-Pro
+=============================== */
+
+/* Wrapper for code blocks */
+pre[class*='language-'] {
+  background-color: #282c34; /* One Dark Pro background */
+  color: #abb2bf; /* Default text color */
+  padding: 1rem; /* Tailwind p-4 */
+  border-radius: 0.5rem; /* Tailwind rounded-lg */
+  overflow: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem; /* Tailwind text-sm */
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Code inside pre */
+pre > code {
+  display: block;
+  white-space: pre;
+}
+
+/* Each line for rehype-prism-plus */
+.code-line {
+  display: block;
+  position: relative;
+}
+
+/* Optional subtle hover highlight */
+pre[class*='language-'] .code-line:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================
+   Prism Token Colors (One Dark Pro)
+=============================== */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #5c6370; /* gray comments */
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #abb2bf; /* default punctuation */
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #d19a66;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #98c379;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #56b6c2;
+}
+
+.token.atrule,
+.token.keyword,
+.token.class-name {
+  color: #c678dd;
+}
+
+.token.function,
+.token.method {
+  color: #61afef;
+}
+
+.token.regex,
+.token.important,
+.token.bold {
+  color: #e06c75;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.constant,
+.token.deleted {
+  color: #e06c75;
+}
+
+/* ============================
+   Line Numbers
+=============================== */
+pre.line-numbers {
+  counter-reset: linenumber;
+  padding-left: 3.8em;
+}
+
+pre.line-numbers .code-line {
+  padding-left: 0.5em;
+}
+
+pre.line-numbers .code-line:before {
+  counter-increment: linenumber;
+  content: counter(linenumber);
+  position: absolute;
+  left: -3.3em;
+  width: 3em;
+  text-align: right;
+  color: #5c6370; /* One Dark Pro gray line numbers */
+  user-select: none;
+}
