@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
-@import '../styles/prism-tomorrow.css';
+@import '../client/styles/prism-tomorrow.css';
 @custom-variant dark (&:where(.dark, .dark *));
 
 ::view-transition-old(root),

@@ -8,7 +8,7 @@ import { rehype } from 'rehype';
 import rehypePrism from 'rehype-prism-plus';
 
 export async function getPost(slug: string) {
-  const filePath = path.join(process.cwd(), 'posts', `${slug}.md`);
+  const filePath = path.join(process.cwd(), 'client', 'posts', `${slug}.md`);
   const file = fs.readFileSync(filePath, 'utf-8');
 
   const { content, data } = matter(file);
@@ -28,7 +28,7 @@ export async function getPost(slug: string) {
   };
 }
 
-const postsDir = path.join(process.cwd(), 'posts');
+const postsDir = path.join(process.cwd(), 'client', 'posts');
 
 export function getPosts() {
   if (!fs.existsSync(postsDir)) {
