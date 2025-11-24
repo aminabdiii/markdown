@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // app/api/users/[userId]/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { validateRequest, ValidationError } from '@/lib/validate_request';
+import {
+  validateRequest,
+  ValidationError,
+} from '@/client/lib/validate_request';
 import {
   createUserBodySchema,
   getUserQuerySchema,
   userIdParamsSchema,
-} from '@/lib/schemas';
+} from '@/client/lib/schemas';
 
 export async function PUT(
   request: NextRequest,

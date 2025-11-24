@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { Providers } from '../components/providers';
-import ThemeToggle from '../components/themeToggle';
+import { Providers } from '../client/components/providers';
+import ThemeToggle from '../client/components/themeToggle';
 
 const IranSans = localFont({
   src: [

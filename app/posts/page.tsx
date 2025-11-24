@@ -1,4 +1,4 @@
-import { getPosts } from '@/lib/post';
+import { getPosts } from '@/client/lib/post';
 import Link from 'next/link';
 
 export default function PostsPage() {
