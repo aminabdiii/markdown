@@ -1,17 +1,24 @@
-'use client';
+"use client";
 
-import { ThemeProvider } from 'next-themes';
-import path from 'path';
-import { useEffect, useState } from 'react';
+import { ThemeProvider } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const theme = localStorage.getItem("theme");
+    if (!theme) {
+      localStorage.setItem("theme", mq.matches ? "dark" : "light");
+    }
+  }, []);
 
   if (!mounted) {
-    return <>{children}</>;
+    return null;
   }
 
   return (
@@ -24,5 +31,3 @@ export function Providers({ children }: { children: React.ReactNode }) {
     </ThemeProvider>
   );
 }
-
-console.log(process.cwd());

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
@@ -10,6 +10,6 @@ const BlogPost = new Schema({
   date: Date,
 });
 
-const BlogPostSchema = mongoose.model('Post', BlogPost);
+const BlogPostSchema = mongoose.model("Post", BlogPost);
 
 export default BlogPostSchema;
