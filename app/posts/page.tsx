@@ -1,5 +1,5 @@
-import { getPosts } from '@/client/lib/post';
-import Link from 'next/link';
+import { getPosts } from "@/lib/post";
+import Link from "next/link";
 
 export default function PostsPage() {
   const posts = getPosts();

@@ -1,6 +1,6 @@
-import RenderDynamicHTML from '@/client/components/renderDynamicHTML';
-import { getPost } from '@/client/lib/post';
-import Link from 'next/link';
+import RenderDynamicHTML from "@/components/renderDynamicHTML";
+import { getPost } from "@/lib/post";
+import Link from "next/link";
 
 export default async function PostPage({
   params,
